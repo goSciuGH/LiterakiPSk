@@ -1,0 +1,122 @@
+\hypertarget{class_dictionary}{}\doxysection{Dictionary Class Reference}
+\label{class_dictionary}\index{Dictionary@{Dictionary}}
+
+
+Klasa reprezentująca słownik.  
+
+
+
+
+{\ttfamily \#include $<$Dictionary.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_dictionary_aa36f24073d9c9001768517aa2322cb82}{$\sim$\+Dictionary}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dictionary_a4162ceb3ee58084fda0062656f616dbf}{load\+Dictionary}} (const std\+::string \&filename, bool \&dict\+Loaded)
+\begin{DoxyCompactList}\small\item\em Włącza wątek ładowania do słownika. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dictionary_a01a4173f38751ea1dc624431984a730a}{wait\+For\+Loading}} ()
+\begin{DoxyCompactList}\small\item\em Oczekiwanie na zakończenie wczytywania. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_dictionary_a40e5a05ba75854b0c481a792e52783f5}{search\+Word}} (const std\+::wstring \&word) const
+\begin{DoxyCompactList}\small\item\em Sprawdzenie czy słowo istnieje w słowniku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$ \mbox{\hyperlink{class_dictionary_a0ba21b522d5d608705d5d6cc0134b078}{engine}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na obiekt silnika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca słownik. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}\label{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}} 
+\index{Dictionary@{Dictionary}!Dictionary@{Dictionary}}
+\index{Dictionary@{Dictionary}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{Dictionary()}{Dictionary()}}
+{\footnotesize\ttfamily Dictionary\+::\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor domyślny. 
+
+\mbox{\Hypertarget{class_dictionary_aa36f24073d9c9001768517aa2322cb82}\label{class_dictionary_aa36f24073d9c9001768517aa2322cb82}} 
+\index{Dictionary@{Dictionary}!````~Dictionary@{$\sim$Dictionary}}
+\index{````~Dictionary@{$\sim$Dictionary}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{$\sim$Dictionary()}{~Dictionary()}}
+{\footnotesize\ttfamily Dictionary\+::$\sim$\+Dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dekonstruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dictionary_a4162ceb3ee58084fda0062656f616dbf}\label{class_dictionary_a4162ceb3ee58084fda0062656f616dbf}} 
+\index{Dictionary@{Dictionary}!loadDictionary@{loadDictionary}}
+\index{loadDictionary@{loadDictionary}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{loadDictionary()}{loadDictionary()}}
+{\footnotesize\ttfamily void Dictionary\+::load\+Dictionary (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{bool \&}]{dict\+Loaded }\end{DoxyParamCaption})}
+
+
+
+Włącza wątek ładowania do słownika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku \\
+\hline
+{\em dict\+Loaded} & Flaga załadowania słownika \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dictionary_a40e5a05ba75854b0c481a792e52783f5}\label{class_dictionary_a40e5a05ba75854b0c481a792e52783f5}} 
+\index{Dictionary@{Dictionary}!searchWord@{searchWord}}
+\index{searchWord@{searchWord}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{searchWord()}{searchWord()}}
+{\footnotesize\ttfamily bool Dictionary\+::search\+Word (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{word }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdzenie czy słowo istnieje w słowniku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & Wyszukiwane słowo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flaga odnalezienia słowa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_dictionary_a01a4173f38751ea1dc624431984a730a}\label{class_dictionary_a01a4173f38751ea1dc624431984a730a}} 
+\index{Dictionary@{Dictionary}!waitForLoading@{waitForLoading}}
+\index{waitForLoading@{waitForLoading}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{waitForLoading()}{waitForLoading()}}
+{\footnotesize\ttfamily void Dictionary\+::wait\+For\+Loading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Oczekiwanie na zakończenie wczytywania. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dictionary_a0ba21b522d5d608705d5d6cc0134b078}\label{class_dictionary_a0ba21b522d5d608705d5d6cc0134b078}} 
+\index{Dictionary@{Dictionary}!engine@{engine}}
+\index{engine@{engine}!Dictionary@{Dictionary}}
+\doxysubsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_engine}{Game\+Engine}}$\ast$ Dictionary\+::engine}
+
+
+
+Wskaźnik na obiekt silnika. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dictionary_8h}{Dictionary.\+h}}\item 
+\mbox{\hyperlink{_dictionary_8cpp}{Dictionary.\+cpp}}\end{DoxyCompactItemize}

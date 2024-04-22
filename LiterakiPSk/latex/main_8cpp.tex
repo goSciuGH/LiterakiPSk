@@ -1,0 +1,204 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}Game\+Engine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Loading\+Screen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tile.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} programu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{main_8cpp_ae9459e1f8e119f46adb7e077e16b68b8}{board\+Letter\+Bonuses}} \mbox{[}15\mbox{]}\mbox{[}15\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica reprezentująca kolor pól planszy, używana do przyznawana premii za dopasowanie płytek. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{main_8cpp_a17db3546515c5f9038e4e281eac2ff54}{board\+Word\+Bonuses}} \mbox{[}15\mbox{]}\mbox{[}15\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica reprezentująca pola-\/mnożniki wartości słów. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_afd26f723db14fccff3af203cb886abca}{FULLRES\+\_\+W}} = 1920
+\begin{DoxyCompactList}\small\item\em Szerokość widoku w px. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ac6cd81fe4cf179b8e18057cca11e4474}{FULLRES\+\_\+H}} = 1080
+\begin{DoxyCompactList}\small\item\em Wysokość widoku w px. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_ad42a73c9228e7688f25d1f2364a576db}{full\+Screen}} = false
+\begin{DoxyCompactList}\small\item\em Opis stanu pełnego okna. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}} = 1.\+0 / 2.\+0
+\begin{DoxyCompactList}\small\item\em Skala wyświetlanego okna. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a39dc59daa5aecfcffa0386f6fc796719}{windowW}} = \mbox{\hyperlink{_game_engine_8h_afd26f723db14fccff3af203cb886abca}{FULLRES\+\_\+W}} $\ast$ \mbox{\hyperlink{_drawable_object_8h_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}}
+\begin{DoxyCompactList}\small\item\em Szerokość okna w px. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a39edee3bbe6094e4d11dcc6646ebcb51}{windowH}} = \mbox{\hyperlink{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}{FULLRES\+\_\+H}} $\ast$ \mbox{\hyperlink{_drawable_object_8h_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}}
+\begin{DoxyCompactList}\small\item\em Wysokość okna w px. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, sf\+::\+Texture $>$ \mbox{\hyperlink{main_8cpp_a1bb97d3f40502b1ece064ba00e879f6e}{textures}}
+\begin{DoxyCompactList}\small\item\em Mapa przechowująca tekstury. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, sf\+::\+Font $>$ \mbox{\hyperlink{main_8cpp_a928b77f05ac0535114e4f568cfc7ca25}{fonts}}
+\begin{DoxyCompactList}\small\item\em Mapa przechowująca czcionki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} programu. 
+
+\begin{DoxyReturn}{Returns}
+Nic. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_ae9459e1f8e119f46adb7e077e16b68b8}\label{main_8cpp_ae9459e1f8e119f46adb7e077e16b68b8}} 
+\index{main.cpp@{main.cpp}!boardLetterBonuses@{boardLetterBonuses}}
+\index{boardLetterBonuses@{boardLetterBonuses}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{boardLetterBonuses}{boardLetterBonuses}}
+{\footnotesize\ttfamily const int board\+Letter\+Bonuses\mbox{[}15\mbox{]}\mbox{[}15\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{5,\ 0,\ 0,\ 0,\ 0,\ 2,\ 0,\ 5,\ 0,\ 2,\ 0,\ 0,\ 0,\ 0,\ 5\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 0,\ 0,\ 2,\ 0,\ 5,\ 0,\ 5,\ 0,\ 2,\ 0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 3,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 5,\ 0,\ 1,\ 0,\ 0,\ 3,\ 0,\ 3,\ 0,\ 0,\ 1,\ 0,\ 5,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{5,\ 0,\ 1,\ 0,\ 0,\ 3,\ 0,\ 5,\ 0,\ 3,\ 0,\ 0,\ 1,\ 0,\ 5\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 5,\ 0,\ 1,\ 0,\ 0,\ 3,\ 0,\ 3,\ 0,\ 0,\ 1,\ 0,\ 5,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 3,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 0,\ 2,\ 0,\ 0,\ 0,\ 1,\ 0,\ 0,\ 0,\ 2,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{0,\ 0,\ 0,\ 0,\ 2,\ 0,\ 5,\ 0,\ 5,\ 0,\ 2,\ 0,\ 0,\ 0,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{5,\ 0,\ 0,\ 0,\ 0,\ 2,\ 0,\ 5,\ 0,\ 2,\ 0,\ 0,\ 0,\ 0,\ 5\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Tablica reprezentująca kolor pól planszy, używana do przyznawana premii za dopasowanie płytek. 
+
+\mbox{\Hypertarget{main_8cpp_a17db3546515c5f9038e4e281eac2ff54}\label{main_8cpp_a17db3546515c5f9038e4e281eac2ff54}} 
+\index{main.cpp@{main.cpp}!boardWordBonuses@{boardWordBonuses}}
+\index{boardWordBonuses@{boardWordBonuses}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{boardWordBonuses}{boardWordBonuses}}
+{\footnotesize\ttfamily const int board\+Word\+Bonuses\mbox{[}15\mbox{]}\mbox{[}15\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 3,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 3,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{3,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 3\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{3,\ 1,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 2,\ 1,\ 1,\ 1,\ 1,\ 3\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1\},}
+\DoxyCodeLine{\ \ \ \ \{1,\ 1,\ 3,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 1,\ 3,\ 1,\ 1\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Tablica reprezentująca pola-\/mnożniki wartości słów. 
+
+\mbox{\Hypertarget{main_8cpp_a928b77f05ac0535114e4f568cfc7ca25}\label{main_8cpp_a928b77f05ac0535114e4f568cfc7ca25}} 
+\index{main.cpp@{main.cpp}!fonts@{fonts}}
+\index{fonts@{fonts}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{fonts}{fonts}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Font$>$ fonts}
+
+
+
+Mapa przechowująca czcionki. 
+
+\mbox{\Hypertarget{main_8cpp_ac6cd81fe4cf179b8e18057cca11e4474}\label{main_8cpp_ac6cd81fe4cf179b8e18057cca11e4474}} 
+\index{main.cpp@{main.cpp}!FULLRES\_H@{FULLRES\_H}}
+\index{FULLRES\_H@{FULLRES\_H}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FULLRES\_H}{FULLRES\_H}}
+{\footnotesize\ttfamily int FULLRES\+\_\+H = 1080}
+
+
+
+Wysokość widoku w px. 
+
+\mbox{\Hypertarget{main_8cpp_afd26f723db14fccff3af203cb886abca}\label{main_8cpp_afd26f723db14fccff3af203cb886abca}} 
+\index{main.cpp@{main.cpp}!FULLRES\_W@{FULLRES\_W}}
+\index{FULLRES\_W@{FULLRES\_W}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FULLRES\_W}{FULLRES\_W}}
+{\footnotesize\ttfamily int FULLRES\+\_\+W = 1920}
+
+
+
+Szerokość widoku w px. 
+
+\mbox{\Hypertarget{main_8cpp_ad42a73c9228e7688f25d1f2364a576db}\label{main_8cpp_ad42a73c9228e7688f25d1f2364a576db}} 
+\index{main.cpp@{main.cpp}!fullScreen@{fullScreen}}
+\index{fullScreen@{fullScreen}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{fullScreen}{fullScreen}}
+{\footnotesize\ttfamily bool full\+Screen = false}
+
+
+
+Opis stanu pełnego okna. 
+
+\mbox{\Hypertarget{main_8cpp_a1bb97d3f40502b1ece064ba00e879f6e}\label{main_8cpp_a1bb97d3f40502b1ece064ba00e879f6e}} 
+\index{main.cpp@{main.cpp}!textures@{textures}}
+\index{textures@{textures}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Texture$>$ textures}
+
+
+
+Mapa przechowująca tekstury. 
+
+\mbox{\Hypertarget{main_8cpp_a39edee3bbe6094e4d11dcc6646ebcb51}\label{main_8cpp_a39edee3bbe6094e4d11dcc6646ebcb51}} 
+\index{main.cpp@{main.cpp}!windowH@{windowH}}
+\index{windowH@{windowH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{windowH}{windowH}}
+{\footnotesize\ttfamily int windowH = \mbox{\hyperlink{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}{FULLRES\+\_\+H}} $\ast$ \mbox{\hyperlink{_drawable_object_8h_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}}}
+
+
+
+Wysokość okna w px. 
+
+\mbox{\Hypertarget{main_8cpp_a5c8d625af0f0eabf783c47c8cce202c5}\label{main_8cpp_a5c8d625af0f0eabf783c47c8cce202c5}} 
+\index{main.cpp@{main.cpp}!windowScale@{windowScale}}
+\index{windowScale@{windowScale}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{windowScale}{windowScale}}
+{\footnotesize\ttfamily double window\+Scale = 1.\+0 / 2.\+0}
+
+
+
+Skala wyświetlanego okna. 
+
+\mbox{\Hypertarget{main_8cpp_a39dc59daa5aecfcffa0386f6fc796719}\label{main_8cpp_a39dc59daa5aecfcffa0386f6fc796719}} 
+\index{main.cpp@{main.cpp}!windowW@{windowW}}
+\index{windowW@{windowW}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{windowW}{windowW}}
+{\footnotesize\ttfamily int windowW = \mbox{\hyperlink{_game_engine_8h_afd26f723db14fccff3af203cb886abca}{FULLRES\+\_\+W}} $\ast$ \mbox{\hyperlink{_drawable_object_8h_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}}}
+
+
+
+Szerokość okna w px. 
+

@@ -1,0 +1,279 @@
+\hypertarget{class_tile}{}\doxysection{Tile Class Reference}
+\label{class_tile}\index{Tile@{Tile}}
+
+
+Klasa reprezentująca płytki.  
+
+
+
+
+{\ttfamily \#include $<$Tile.\+h$>$}
+
+Inheritance diagram for Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor główny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a68cb6e34433eb9e1cacec91274d378d1}{Tile}} (sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}, std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania pozycji i tekstury. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_ac5e67e25ec0064732eb16f0f4471d2a5}{Tile}} (int l)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a306ab698100fdef8b42a6d273462e674}{Tile}} (int l, sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}, std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy, pozycji i tekstury. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile_a480e50775203166df068f0cfc889d91b}{Tile}} (const \mbox{\hyperlink{class_tile}{Tile}} \&other)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tile_a1c89758a48472e8448a1485440ec3091}{draw\+Self}} (sf\+::\+Render\+Window \&w) const override
+\begin{DoxyCompactList}\small\item\em Rysowanie się na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{Drawable\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a22f1c2210c5eddd9fa9d8747e889b520}{Drawable\+Object}} (std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania tekstury. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_ace406e50c7d0e7707421804af344669f}{Drawable\+Object}} (sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}})
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania pozycji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a015750e59342ebb96d10a93a25cce5c2}{Drawable\+Object}} (sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}, std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania tekstury i pozycji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a7868d696a64275f81a7c733e50dade66}{Drawable\+Object}} (int l)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a8de2398c31c67200a2c7b5d7b140901f}{Drawable\+Object}} (int l, std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy i tekstury. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a3a845437cb91eff1d983ef00e1750b7b}{Drawable\+Object}} (int l, sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}})
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy i pozycji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a4d00465fa6971a523aeeed4f4ecee06d}{Drawable\+Object}} (int l, sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}, std\+::string texture\+Name)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją przypisania warstwy, pozycji i tekstury. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_drawable_object_a960f19176b7b0f03709fd8dbe43be0a0}{Drawable\+Object}} (const \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawable_object_a535f1c6a4e694373901bfa3ac2c36f32}{update\+Self}} (sf\+::\+Render\+Window \&w, sf\+::\+Time d) const override
+\begin{DoxyCompactList}\small\item\em Aktualizacja własnych wartości, własnej logiki, itp. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_drawable_object_aa9611516c0e5f0b899d1d432797aae4d}{draw\+Self}} (sf\+::\+Render\+Window \&w) const override
+\begin{DoxyCompactList}\small\item\em Rysowanie się na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstrukto domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae874fea238d18a82036f218632d73008}{Game\+Object}} (int l)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją ustalenia warstwy, na której znajduje się obiekt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ab13374d070cfe6a1459539d54c671eba}{Game\+Object}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}{$\sim$\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{class_game_object_afbdf830a61e22ffef8918296cbb5fa8f}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca ID obiektu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_abfa72c391d3829daf3ff9b72a29b2cd0}{is\+In\+Class}} (std\+::string classname) const
+\begin{DoxyCompactList}\small\item\em Sprawdza czy obiekt należy do zadanej klasy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aef287818728304f045c51a4947d8a0eb}{update\+Self}} (sf\+::\+Render\+Window \&w, sf\+::\+Time d) const
+\begin{DoxyCompactList}\small\item\em Aktualizacja własnych wartości, własnej logiki, itp. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a3bc61a07afc658b8889aeaf708f1541d}{draw\+Self}} (sf\+::\+Render\+Window \&w) const
+\begin{DoxyCompactList}\small\item\em Rysowanie się na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_tile_ab316f97e942a55b9e6413d642feabd85}{rack\+Pos}}
+\begin{DoxyCompactList}\small\item\em Pozycja na stojaku. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_tile_a50624ad2188ad9dad73c13a2fd10a88c}{board\+Pos}} = \{ -\/1, -\/1 \}
+\begin{DoxyCompactList}\small\item\em Pozycja na planszy. \end{DoxyCompactList}\item 
+std\+::pair$<$ wchar\+\_\+t, unsigned int $>$ \mbox{\hyperlink{class_tile_a33f1b83f16b48aa3c6e1c0f319ea0dde}{letter\+Logic}}
+\begin{DoxyCompactList}\small\item\em Litera płytki. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_tile_a4ace6cdc8ae8ae4fd71a5534f87482dd}{letter\+Visual}}
+\begin{DoxyCompactList}\small\item\em Litera wyświetlana na płytce. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_tile_ab004fbf39d208df49eb490f0ff96c1be}{letter\+Displace}}
+\begin{DoxyCompactList}\small\item\em Przesunięcie litery wobec punktu zerowego płytki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{class_drawable_object}{Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ sf\+::\+Sprite $>$ \mbox{\hyperlink{class_drawable_object_a1950db1955de6c924dad1f606bb3311b}{sprites}}
+\begin{DoxyCompactList}\small\item\em Vector zawierający duszki wykorzystywane przez obiekt. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_drawable_object_a0215d6bec1e1668d0df439c5c8e143b1}{speed}} = 0
+\begin{DoxyCompactList}\small\item\em Prędkość obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$ \mbox{\hyperlink{class_game_object_a9fb13d0ecf0a7580bec954feb9c04044}{engine}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na silnik. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{class_game_object_af89f757d89c76fed48f1a30230aff605}{obj\+ID}}
+\begin{DoxyCompactList}\small\item\em ID obiektu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_a77b865c8396028f6250dcff11aa76421}{layer}}
+\begin{DoxyCompactList}\small\item\em Warstwa obiektu. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}
+\begin{DoxyCompactList}\small\item\em Pozycja na ekranie. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_game_object_a40b7f4b610bfb944a7db71bc8f4c7dd5}{my\+Classes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_game_object}{Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_game_object_a6475ad6aa1f9ee5356869ba628ee1b8c}{next\+ID}} = 1
+\begin{DoxyCompactList}\small\item\em Zmienna pomagająca przypisać niepowtarzalną wartość ID do nowych obiektów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca płytki. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}\label{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor główny. 
+
+\mbox{\Hypertarget{class_tile_a68cb6e34433eb9e1cacec91274d378d1}\label{class_tile_a68cb6e34433eb9e1cacec91274d378d1}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos,  }\item[{std\+::string}]{texture\+Name }\end{DoxyParamCaption})}
+
+
+
+Konstruktor z opcją przypisania pozycji i tekstury. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Pozycja na ekranie \\
+\hline
+{\em texture\+Name} & Nazwa tekstury \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_ac5e67e25ec0064732eb16f0f4471d2a5}\label{class_tile_ac5e67e25ec0064732eb16f0f4471d2a5}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Konstruktor z opcją przypisania warstwy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Wartość warstwy \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_a306ab698100fdef8b42a6d273462e674}\label{class_tile_a306ab698100fdef8b42a6d273462e674}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{int}]{l,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{std\+::string}]{texture\+Name }\end{DoxyParamCaption})}
+
+
+
+Konstruktor z opcją przypisania warstwy, pozycji i tekstury. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \\
+\hline
+{\em pos} & \\
+\hline
+{\em texture\+Name} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_a480e50775203166df068f0cfc889d91b}\label{class_tile_a480e50775203166df068f0cfc889d91b}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tile}{Tile}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Obiekt źródłówy \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tile_a1c89758a48472e8448a1485440ec3091}\label{class_tile_a1c89758a48472e8448a1485440ec3091}} 
+\index{Tile@{Tile}!drawSelf@{drawSelf}}
+\index{drawSelf@{drawSelf}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{drawSelf()}{drawSelf()}}
+{\footnotesize\ttfamily void Tile\+::draw\+Self (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{w }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysowanie się na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Okno renderowania \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_drawable_object_aa9611516c0e5f0b899d1d432797aae4d}{Drawable\+Object}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_tile_a50624ad2188ad9dad73c13a2fd10a88c}\label{class_tile_a50624ad2188ad9dad73c13a2fd10a88c}} 
+\index{Tile@{Tile}!boardPos@{boardPos}}
+\index{boardPos@{boardPos}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{boardPos}{boardPos}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Tile\+::board\+Pos = \{ -\/1, -\/1 \}}
+
+
+
+Pozycja na planszy. 
+
+\mbox{\Hypertarget{class_tile_ab004fbf39d208df49eb490f0ff96c1be}\label{class_tile_ab004fbf39d208df49eb490f0ff96c1be}} 
+\index{Tile@{Tile}!letterDisplace@{letterDisplace}}
+\index{letterDisplace@{letterDisplace}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{letterDisplace}{letterDisplace}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Tile\+::letter\+Displace}
+
+
+
+Przesunięcie litery wobec punktu zerowego płytki. 
+
+\mbox{\Hypertarget{class_tile_a33f1b83f16b48aa3c6e1c0f319ea0dde}\label{class_tile_a33f1b83f16b48aa3c6e1c0f319ea0dde}} 
+\index{Tile@{Tile}!letterLogic@{letterLogic}}
+\index{letterLogic@{letterLogic}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{letterLogic}{letterLogic}}
+{\footnotesize\ttfamily std\+::pair$<$wchar\+\_\+t, unsigned int$>$ Tile\+::letter\+Logic}
+
+
+
+Litera płytki. 
+
+\mbox{\Hypertarget{class_tile_a4ace6cdc8ae8ae4fd71a5534f87482dd}\label{class_tile_a4ace6cdc8ae8ae4fd71a5534f87482dd}} 
+\index{Tile@{Tile}!letterVisual@{letterVisual}}
+\index{letterVisual@{letterVisual}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{letterVisual}{letterVisual}}
+{\footnotesize\ttfamily sf\+::\+Text Tile\+::letter\+Visual}
+
+
+
+Litera wyświetlana na płytce. 
+
+\mbox{\Hypertarget{class_tile_ab316f97e942a55b9e6413d642feabd85}\label{class_tile_ab316f97e942a55b9e6413d642feabd85}} 
+\index{Tile@{Tile}!rackPos@{rackPos}}
+\index{rackPos@{rackPos}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{rackPos}{rackPos}}
+{\footnotesize\ttfamily unsigned int Tile\+::rack\+Pos}
+
+
+
+Pozycja na stojaku. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tile_8h}{Tile.\+h}}\item 
+\mbox{\hyperlink{_tile_8cpp}{Tile.\+cpp}}\end{DoxyCompactItemize}

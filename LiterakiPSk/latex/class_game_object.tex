@@ -1,0 +1,255 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+Klasa reprezentująca obiekt gry.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_object_1_1_compare_objects}{Compare\+Objects}}
+\begin{DoxyCompactList}\small\item\em Komparator warstw dwóch obiektów -\/ wykorzystywany w celu umieszczania obiektów w liście obiektów w sposób posegregowany. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstrukto domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae874fea238d18a82036f218632d73008}{Game\+Object}} (int l)
+\begin{DoxyCompactList}\small\item\em Konstruktor z opcją ustalenia warstwy, na której znajduje się obiekt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ab13374d070cfe6a1459539d54c671eba}{Game\+Object}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&other)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}{$\sim$\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{class_game_object_afbdf830a61e22ffef8918296cbb5fa8f}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca ID obiektu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_object_abfa72c391d3829daf3ff9b72a29b2cd0}{is\+In\+Class}} (std\+::string classname) const
+\begin{DoxyCompactList}\small\item\em Sprawdza czy obiekt należy do zadanej klasy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aef287818728304f045c51a4947d8a0eb}{update\+Self}} (sf\+::\+Render\+Window \&w, sf\+::\+Time d) const
+\begin{DoxyCompactList}\small\item\em Aktualizacja własnych wartości, własnej logiki, itp. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a3bc61a07afc658b8889aeaf708f1541d}{draw\+Self}} (sf\+::\+Render\+Window \&w) const
+\begin{DoxyCompactList}\small\item\em Rysowanie się na ekranie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_engine}{Game\+Engine}} $\ast$ \mbox{\hyperlink{class_game_object_a9fb13d0ecf0a7580bec954feb9c04044}{engine}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na silnik. \end{DoxyCompactList}\item 
+unsigned long long \mbox{\hyperlink{class_game_object_af89f757d89c76fed48f1a30230aff605}{obj\+ID}}
+\begin{DoxyCompactList}\small\item\em ID obiektu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_object_a77b865c8396028f6250dcff11aa76421}{layer}}
+\begin{DoxyCompactList}\small\item\em Warstwa obiektu. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}}
+\begin{DoxyCompactList}\small\item\em Pozycja na ekranie. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_game_object_a40b7f4b610bfb944a7db71bc8f4c7dd5}{my\+Classes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_game_object_a6475ad6aa1f9ee5356869ba628ee1b8c}{next\+ID}} = 1
+\begin{DoxyCompactList}\small\item\em Zmienna pomagająca przypisać niepowtarzalną wartość ID do nowych obiektów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca obiekt gry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstrukto domyślny. 
+
+\mbox{\Hypertarget{class_game_object_ae874fea238d18a82036f218632d73008}\label{class_game_object_ae874fea238d18a82036f218632d73008}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Konstruktor z opcją ustalenia warstwy, na której znajduje się obiekt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Warstwa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_ab13374d070cfe6a1459539d54c671eba}\label{class_game_object_ab13374d070cfe6a1459539d54c671eba}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Źródłowy obiekt \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}\label{class_game_object_a224d4f6d9dd75c8a6f9d022eaf586fd9}} 
+\index{GameObject@{GameObject}!````~GameObject@{$\sim$GameObject}}
+\index{````~GameObject@{$\sim$GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameObject()}{~GameObject()}}
+{\footnotesize\ttfamily virtual Game\+Object\+::$\sim$\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Dekonstruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_a3bc61a07afc658b8889aeaf708f1541d}\label{class_game_object_a3bc61a07afc658b8889aeaf708f1541d}} 
+\index{GameObject@{GameObject}!drawSelf@{drawSelf}}
+\index{drawSelf@{drawSelf}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{drawSelf()}{drawSelf()}}
+{\footnotesize\ttfamily virtual void Game\+Object\+::draw\+Self (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{w }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Rysowanie się na ekranie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Okno renderowania \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_drawable_object_aa9611516c0e5f0b899d1d432797aae4d}{Drawable\+Object}}, and \mbox{\hyperlink{class_tile_a1c89758a48472e8448a1485440ec3091}{Tile}}.
+
+\mbox{\Hypertarget{class_game_object_afbdf830a61e22ffef8918296cbb5fa8f}\label{class_game_object_afbdf830a61e22ffef8918296cbb5fa8f}} 
+\index{GameObject@{GameObject}!getID@{getID}}
+\index{getID@{getID}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily unsigned long long Game\+Object\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca ID obiektu. 
+
+\begin{DoxyReturn}{Returns}
+ID obiektu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_abfa72c391d3829daf3ff9b72a29b2cd0}\label{class_game_object_abfa72c391d3829daf3ff9b72a29b2cd0}} 
+\index{GameObject@{GameObject}!isInClass@{isInClass}}
+\index{isInClass@{isInClass}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{isInClass()}{isInClass()}}
+{\footnotesize\ttfamily bool Game\+Object\+::is\+In\+Class (\begin{DoxyParamCaption}\item[{std\+::string}]{classname }\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza czy obiekt należy do zadanej klasy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em classname} & Nazwa klasy \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wynik testu -\/ prawda lub fałsz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_aef287818728304f045c51a4947d8a0eb}\label{class_game_object_aef287818728304f045c51a4947d8a0eb}} 
+\index{GameObject@{GameObject}!updateSelf@{updateSelf}}
+\index{updateSelf@{updateSelf}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{updateSelf()}{updateSelf()}}
+{\footnotesize\ttfamily virtual void Game\+Object\+::update\+Self (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{w,  }\item[{sf\+::\+Time}]{d }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Aktualizacja własnych wartości, własnej logiki, itp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Okno renderowania \\
+\hline
+{\em d} & Czas klatki \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_drawable_object_a535f1c6a4e694373901bfa3ac2c36f32}{Drawable\+Object}}, and \mbox{\hyperlink{class_loading_screen_a068e28ce3f6dab38685c48586487a4b4}{Loading\+Screen}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_object_a9fb13d0ecf0a7580bec954feb9c04044}\label{class_game_object_a9fb13d0ecf0a7580bec954feb9c04044}} 
+\index{GameObject@{GameObject}!engine@{engine}}
+\index{engine@{engine}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{engine}{engine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_engine}{Game\+Engine}}$\ast$ Game\+Object\+::engine}
+
+
+
+Wskaźnik na silnik. 
+
+\mbox{\Hypertarget{class_game_object_a77b865c8396028f6250dcff11aa76421}\label{class_game_object_a77b865c8396028f6250dcff11aa76421}} 
+\index{GameObject@{GameObject}!layer@{layer}}
+\index{layer@{layer}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{layer}{layer}}
+{\footnotesize\ttfamily int Game\+Object\+::layer}
+
+
+
+Warstwa obiektu. 
+
+\mbox{\Hypertarget{class_game_object_a40b7f4b610bfb944a7db71bc8f4c7dd5}\label{class_game_object_a40b7f4b610bfb944a7db71bc8f4c7dd5}} 
+\index{GameObject@{GameObject}!myClasses@{myClasses}}
+\index{myClasses@{myClasses}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{myClasses}{myClasses}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Game\+Object\+::my\+Classes}
+
+Vector zawierający nazwy klas, do których należy obiekt \mbox{\Hypertarget{class_game_object_a6475ad6aa1f9ee5356869ba628ee1b8c}\label{class_game_object_a6475ad6aa1f9ee5356869ba628ee1b8c}} 
+\index{GameObject@{GameObject}!nextID@{nextID}}
+\index{nextID@{nextID}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{nextID}{nextID}}
+{\footnotesize\ttfamily int Game\+Object\+::next\+ID = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Zmienna pomagająca przypisać niepowtarzalną wartość ID do nowych obiektów. 
+
+\mbox{\Hypertarget{class_game_object_af89f757d89c76fed48f1a30230aff605}\label{class_game_object_af89f757d89c76fed48f1a30230aff605}} 
+\index{GameObject@{GameObject}!objID@{objID}}
+\index{objID@{objID}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{objID}{objID}}
+{\footnotesize\ttfamily unsigned long long Game\+Object\+::obj\+ID}
+
+
+
+ID obiektu. 
+
+\mbox{\Hypertarget{class_game_object_ac087df0858acabd46a57da983811c610}\label{class_game_object_ac087df0858acabd46a57da983811c610}} 
+\index{GameObject@{GameObject}!pos@{pos}}
+\index{pos@{pos}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Game\+Object\+::pos\hspace{0.3cm}{\ttfamily [mutable]}}
+
+
+
+Pozycja na ekranie. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\item 
+\mbox{\hyperlink{_game_object_8cpp}{Game\+Object.\+cpp}}\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}
