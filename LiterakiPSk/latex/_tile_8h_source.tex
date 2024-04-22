@@ -1,0 +1,30 @@
+\hypertarget{_tile_8h_source}{}\doxysection{Tile.\+h}
+\mbox{\hyperlink{_tile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tile}{Tile}}\ :}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}}(sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}}(\textcolor{keywordtype}{int}\ l);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_tile_aeeb5593bb6b75aae2edfcccbc84ab378}{Tile}}(\textcolor{keywordtype}{int}\ l,\ sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_tile_a480e50775203166df068f0cfc889d91b}{Tile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_tile}{Tile}}\&\ other)\ :\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}(other)\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tile_ab316f97e942a55b9e6413d642feabd85}{rackPos}};\ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ sf::Vector2i\ \mbox{\hyperlink{class_tile_a50624ad2188ad9dad73c13a2fd10a88c}{boardPos}}\ =\ \{\ -\/1,\ -\/1\ \};\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::pair<wchar\_t,\ unsigned\ int>\ \mbox{\hyperlink{class_tile_a33f1b83f16b48aa3c6e1c0f319ea0dde}{letterLogic}};\ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_tile_a4ace6cdc8ae8ae4fd71a5534f87482dd}{letterVisual}};\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_tile_ab004fbf39d208df49eb490f0ff96c1be}{letterDisplace}};\ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tile_a1c89758a48472e8448a1485440ec3091}{drawSelf}}(sf::RenderWindow\&\ w)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+
+\end{DoxyCode}

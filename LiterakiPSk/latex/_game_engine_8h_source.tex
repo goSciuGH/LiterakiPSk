@@ -1,0 +1,88 @@
+\hypertarget{_game_engine_8h_source}{}\doxysection{Game\+Engine.\+h}
+\mbox{\hyperlink{_game_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_tile_8h}{Tile.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dictionary_8h}{Dictionary.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_loading_screen_8h}{LoadingScreen.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_ae9459e1f8e119f46adb7e077e16b68b8}{boardLetterBonuses}}[15][15];}
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_a17db3546515c5f9038e4e281eac2ff54}{boardWordBonuses}}[15][15];}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{extern}\ std::map<std::string,\ sf::Texture>\ \mbox{\hyperlink{_game_engine_8h_a1bb97d3f40502b1ece064ba00e879f6e}{textures}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ std::map<std::string,\ sf::Font>\ \mbox{\hyperlink{_game_engine_8h_a928b77f05ac0535114e4f568cfc7ca25}{fonts}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_afd26f723db14fccff3af203cb886abca}{FULLRES\_W}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}{FULLRES\_H}};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_game_engine_8h_a5c8d625af0f0eabf783c47c8cce202c5}{windowScale}};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_a39dc59daa5aecfcffa0386f6fc796719}{windowW}};}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_game_engine_8h_a39edee3bbe6094e4d11dcc6646ebcb51}{windowH}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tile}{Tile}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_engine}{GameEngine}}}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_game_engine_a64c430f74d72e2745646fdbffbd97930}{GameEngine}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}{\string~GameEngine}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}{run}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ sf::RenderWindow\ \mbox{\hyperlink{class_game_engine_a86c492f4c9de7c08570918f245f4e597}{mainWindow}};\ \ }
+\DoxyCodeLine{00044\ \ \ \ \ sf::View\ \mbox{\hyperlink{class_game_engine_a4dec6d3c81d0cb6f128b91d26f4aea86}{view}};\ \ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_engine_a42c7e608e3ce860170b9ca68d03b256f}{gameState}}\ =\ 0;\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ 0\ \ \ -\/\ \ \ ładowanie}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ 1\ \ \ -\/\ \ \ przejście\ do\ gry}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ \ \ \ \ 2\ \ \ -\/\ \ \ gra}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_dictionary}{Dictionary}}\ \mbox{\hyperlink{class_game_engine_ac70d86dee428701a6f5914c7cfb1cc25}{dictionary}};\ \ }
+\DoxyCodeLine{00054\ \ \ \ \ std::atomic<bool>\ \mbox{\hyperlink{class_game_engine_a98c65cf13ad47196d255e0dae51ac92f}{isDictionaryLoaded}};\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ std::vector<std::pair<wchar\_t,\ unsigned\ int>>\ \mbox{\hyperlink{class_game_engine_ae2ce99ad4f14b80afeca8485f6954b6d}{blueprintBag}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::vector<std::pair<wchar\_t,\ unsigned\ int>>\ \mbox{\hyperlink{class_game_engine_a6af4f2da035099ef08962409c3469f1c}{gameBag}};\ \ \ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::multiset<GameObject*,\ GameObject::CompareObjects>\ \mbox{\hyperlink{class_game_engine_abe7743e51a54821b55cabc3692df9058}{objectSet}};\ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_tile}{Tile}}*\ \mbox{\hyperlink{class_game_engine_ad90c7089e7df8657651ba4914f6c4746}{playerRackTiles}}[2][7];\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_tile}{Tile}}*\ \mbox{\hyperlink{class_game_engine_a15ad5c2ba391a571cd62daf91f43e07a}{onBoardTiles}}[7];\ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_loading_screen}{LoadingScreen}}*\ \mbox{\hyperlink{class_game_engine_a5cb0459f4e77791adbe74515d099a814}{loadScr}};\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game_engine_af075a77b7de3efa2b256957a7c59cdfd}{activePlayer}}\ =\ 0;\ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_tile}{Tile}}*\ \mbox{\hyperlink{class_game_engine_a0e644b76ee87e8e4730e1f778120d297}{heldTile}}\ =\ \textcolor{keyword}{nullptr};\ \ \ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_ac198f27f818ba40b0809883fd68f3ba7}{addObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ obj);}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a668ea2a62d94330ea7dad1fd66069734}{addTile}}(\textcolor{keywordtype}{int}\ player,\ \textcolor{keywordtype}{int}\ slot,\ \mbox{\hyperlink{class_tile}{Tile}}*\ obj);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_engine_a17c152bf4307940acb2e330ea895e0cd}{giveTiles}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ sf::Event\ event;\ \ \ \ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ sf::Clock\ gameClock;\ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ sf::Time\ gameTime;\ \ }
+\DoxyCodeLine{00084\ \ \ \ \ sf::Time\ lastFrameTime\ =\ sf::Time::Zero;\ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ sf::Time\ delta;\ }
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ readInput();}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ updateLogic();}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePhysics();}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGraphics();}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ updateAudio();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+
+\end{DoxyCode}

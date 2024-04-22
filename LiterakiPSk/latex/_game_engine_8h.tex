@@ -1,0 +1,132 @@
+\hypertarget{_game_engine_8h}{}\doxysection{Game\+Engine.\+h File Reference}
+\label{_game_engine_8h}\index{GameEngine.h@{GameEngine.h}}
+{\ttfamily \#include $<$SFML/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}Tile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Dictionary.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Loading\+Screen.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_engine}{Game\+Engine}}
+\begin{DoxyCompactList}\small\item\em Klasa reprezentująca silnik gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{_game_engine_8h_ae9459e1f8e119f46adb7e077e16b68b8}{board\+Letter\+Bonuses}} \mbox{[}15\mbox{]}\mbox{[}15\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica reprezentująca kolor pól planszy, używana do przyznawana premii za dopasowanie płytek. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{_game_engine_8h_a17db3546515c5f9038e4e281eac2ff54}{board\+Word\+Bonuses}} \mbox{[}15\mbox{]}\mbox{[}15\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica reprezentująca pola-\/mnożniki wartości słów. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, sf\+::\+Texture $>$ \mbox{\hyperlink{_game_engine_8h_a1bb97d3f40502b1ece064ba00e879f6e}{textures}}
+\begin{DoxyCompactList}\small\item\em Mapa przechowująca tekstury. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, sf\+::\+Font $>$ \mbox{\hyperlink{_game_engine_8h_a928b77f05ac0535114e4f568cfc7ca25}{fonts}}
+\begin{DoxyCompactList}\small\item\em Mapa przechowująca czcionki. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_game_engine_8h_afd26f723db14fccff3af203cb886abca}{FULLRES\+\_\+W}}
+\begin{DoxyCompactList}\small\item\em Szerokość widoku w px. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}{FULLRES\+\_\+H}}
+\begin{DoxyCompactList}\small\item\em Wysokość widoku w px. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_game_engine_8h_a5c8d625af0f0eabf783c47c8cce202c5}{window\+Scale}}
+\begin{DoxyCompactList}\small\item\em Skala wyświetlanego okna. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_game_engine_8h_a39dc59daa5aecfcffa0386f6fc796719}{windowW}}
+\begin{DoxyCompactList}\small\item\em Szerokość okna w px. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_game_engine_8h_a39edee3bbe6094e4d11dcc6646ebcb51}{windowH}}
+\begin{DoxyCompactList}\small\item\em Wysokość okna w px. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_game_engine_8h_ae9459e1f8e119f46adb7e077e16b68b8}\label{_game_engine_8h_ae9459e1f8e119f46adb7e077e16b68b8}} 
+\index{GameEngine.h@{GameEngine.h}!boardLetterBonuses@{boardLetterBonuses}}
+\index{boardLetterBonuses@{boardLetterBonuses}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{boardLetterBonuses}{boardLetterBonuses}}
+{\footnotesize\ttfamily const int board\+Letter\+Bonuses\mbox{[}15\mbox{]}\mbox{[}15\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tablica reprezentująca kolor pól planszy, używana do przyznawana premii za dopasowanie płytek. 
+
+\mbox{\Hypertarget{_game_engine_8h_a17db3546515c5f9038e4e281eac2ff54}\label{_game_engine_8h_a17db3546515c5f9038e4e281eac2ff54}} 
+\index{GameEngine.h@{GameEngine.h}!boardWordBonuses@{boardWordBonuses}}
+\index{boardWordBonuses@{boardWordBonuses}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{boardWordBonuses}{boardWordBonuses}}
+{\footnotesize\ttfamily const int board\+Word\+Bonuses\mbox{[}15\mbox{]}\mbox{[}15\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Tablica reprezentująca pola-\/mnożniki wartości słów. 
+
+\mbox{\Hypertarget{_game_engine_8h_a928b77f05ac0535114e4f568cfc7ca25}\label{_game_engine_8h_a928b77f05ac0535114e4f568cfc7ca25}} 
+\index{GameEngine.h@{GameEngine.h}!fonts@{fonts}}
+\index{fonts@{fonts}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{fonts}{fonts}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Font$>$ fonts\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mapa przechowująca czcionki. 
+
+\mbox{\Hypertarget{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}\label{_game_engine_8h_ac6cd81fe4cf179b8e18057cca11e4474}} 
+\index{GameEngine.h@{GameEngine.h}!FULLRES\_H@{FULLRES\_H}}
+\index{FULLRES\_H@{FULLRES\_H}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{FULLRES\_H}{FULLRES\_H}}
+{\footnotesize\ttfamily int FULLRES\+\_\+H\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Wysokość widoku w px. 
+
+\mbox{\Hypertarget{_game_engine_8h_afd26f723db14fccff3af203cb886abca}\label{_game_engine_8h_afd26f723db14fccff3af203cb886abca}} 
+\index{GameEngine.h@{GameEngine.h}!FULLRES\_W@{FULLRES\_W}}
+\index{FULLRES\_W@{FULLRES\_W}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{FULLRES\_W}{FULLRES\_W}}
+{\footnotesize\ttfamily int FULLRES\+\_\+W\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Szerokość widoku w px. 
+
+\mbox{\Hypertarget{_game_engine_8h_a1bb97d3f40502b1ece064ba00e879f6e}\label{_game_engine_8h_a1bb97d3f40502b1ece064ba00e879f6e}} 
+\index{GameEngine.h@{GameEngine.h}!textures@{textures}}
+\index{textures@{textures}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, sf\+::\+Texture$>$ textures\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Mapa przechowująca tekstury. 
+
+\mbox{\Hypertarget{_game_engine_8h_a39edee3bbe6094e4d11dcc6646ebcb51}\label{_game_engine_8h_a39edee3bbe6094e4d11dcc6646ebcb51}} 
+\index{GameEngine.h@{GameEngine.h}!windowH@{windowH}}
+\index{windowH@{windowH}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{windowH}{windowH}}
+{\footnotesize\ttfamily int windowH\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Wysokość okna w px. 
+
+\mbox{\Hypertarget{_game_engine_8h_a5c8d625af0f0eabf783c47c8cce202c5}\label{_game_engine_8h_a5c8d625af0f0eabf783c47c8cce202c5}} 
+\index{GameEngine.h@{GameEngine.h}!windowScale@{windowScale}}
+\index{windowScale@{windowScale}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{windowScale}{windowScale}}
+{\footnotesize\ttfamily double window\+Scale\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Skala wyświetlanego okna. 
+
+\mbox{\Hypertarget{_game_engine_8h_a39dc59daa5aecfcffa0386f6fc796719}\label{_game_engine_8h_a39dc59daa5aecfcffa0386f6fc796719}} 
+\index{GameEngine.h@{GameEngine.h}!windowW@{windowW}}
+\index{windowW@{windowW}!GameEngine.h@{GameEngine.h}}
+\doxysubsubsection{\texorpdfstring{windowW}{windowW}}
+{\footnotesize\ttfamily int windowW\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Szerokość okna w px. 
+

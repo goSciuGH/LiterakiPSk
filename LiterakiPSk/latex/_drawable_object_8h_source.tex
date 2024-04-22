@@ -1,0 +1,37 @@
+\hypertarget{_drawable_object_8h_source}{}\doxysection{Drawable\+Object.\+h}
+\mbox{\hyperlink{_drawable_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_drawable_object}{DrawableObject}}\ :}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(std::string\ textureName);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}});}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(\textcolor{keywordtype}{int}\ l);}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(\textcolor{keywordtype}{int}\ l,\ std::string\ textureName);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(\textcolor{keywordtype}{int}\ l,\ sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}});}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_ac41cf4bfc6ebce29e0c1123f2c067cf0}{DrawableObject}}(\textcolor{keywordtype}{int}\ l,\ sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_drawable_object_a960f19176b7b0f03709fd8dbe43be0a0}{DrawableObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}\&\ other)\ :\ \mbox{\hyperlink{class_game_object}{GameObject}}(other)\{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drawable_object_a535f1c6a4e694373901bfa3ac2c36f32}{updateSelf}}(sf::RenderWindow\&\ w,\ sf::Time\ d)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_drawable_object_aa9611516c0e5f0b899d1d432797aae4d}{drawSelf}}(sf::RenderWindow\&\ w)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{mutable}\ std::vector<sf::Sprite>\ \mbox{\hyperlink{class_drawable_object_a1950db1955de6c924dad1f606bb3311b}{sprites}};\ \ \ \ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_drawable_object_a0215d6bec1e1668d0df439c5c8e143b1}{speed}}\ =\ 0;\ \ \ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_drawable_object_8h_a5c8d625af0f0eabf783c47c8cce202c5}{windowScale}};}
+
+\end{DoxyCode}

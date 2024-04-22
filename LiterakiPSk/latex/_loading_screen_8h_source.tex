@@ -1,0 +1,25 @@
+\hypertarget{_loading_screen_8h_source}{}\doxysection{Loading\+Screen.\+h}
+\mbox{\hyperlink{_loading_screen_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_loading_screen}{LoadingScreen}}\ :}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_loading_screen_ad280e1a8f065e9a1efa9e308479ee12d}{LoadingScreen}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_loading_screen_ad280e1a8f065e9a1efa9e308479ee12d}{LoadingScreen}}(sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_loading_screen_ad280e1a8f065e9a1efa9e308479ee12d}{LoadingScreen}}(\textcolor{keywordtype}{int}\ l);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_loading_screen_ad280e1a8f065e9a1efa9e308479ee12d}{LoadingScreen}}(\textcolor{keywordtype}{int}\ l,\ sf::Vector2f\ \mbox{\hyperlink{class_game_object_ac087df0858acabd46a57da983811c610}{pos}},\ std::string\ textureName);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_loading_screen_a8ba40b055ad265d6a4342c6d1100a030}{LoadingScreen}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_loading_screen}{LoadingScreen}}\&\ other)\ :\ \mbox{\hyperlink{class_drawable_object}{DrawableObject}}(other)\ \{\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_loading_screen_a068e28ce3f6dab38685c48586487a4b4}{updateSelf}}(sf::RenderWindow\&\ w,\ sf::Time\ d)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{mutable}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_loading_screen_a8dc1c4686d50718d08d6a3ee8bb03ef5}{isReady}}\ =\ \textcolor{keyword}{true};\ \ \ \ }
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+
+\end{DoxyCode}

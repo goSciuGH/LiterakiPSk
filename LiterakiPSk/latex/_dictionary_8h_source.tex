@@ -1,0 +1,49 @@
+\hypertarget{_dictionary_8h_source}{}\doxysection{Dictionary.\+h}
+\mbox{\hyperlink{_dictionary_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_engine}{GameEngine}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_dictionary}{Dictionary}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_dictionary_aee8d612bc9d323c38faba045ba384b8b}{Dictionary}}():\ root(new\ TrieNode)\ \{\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_dictionary_aa36f24073d9c9001768517aa2322cb82}{\string~Dictionary}}()\ \{\ deleteTrie(root);\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dictionary_a4162ceb3ee58084fda0062656f616dbf}{loadDictionary}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{bool}\&\ dictLoaded);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_dictionary_a01a4173f38751ea1dc624431984a730a}{waitForLoading}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_dictionary_a40e5a05ba75854b0c481a792e52783f5}{searchWord}}(\textcolor{keyword}{const}\ std::wstring\&\ word)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_game_engine}{GameEngine}}*\ \mbox{\hyperlink{class_dictionary_a0ba21b522d5d608705d5d6cc0134b078}{engine}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{struct\ }TrieNode\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::unordered\_map<wchar\_t,\ TrieNode*>\ children;\ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isEndOfWord;\ \ \ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ TrieNode()\ :\ isEndOfWord(\textcolor{keyword}{false})\ \{\}}
+\DoxyCodeLine{00046\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ TrieNode*\ root;\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::thread\ loadingThread;\ \ }
+\DoxyCodeLine{00050\ \ \ \ \ std::mutex\ trieMutex;\ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ insertWordsBatch(\textcolor{keyword}{const}\ std::vector<std::wstring>\&\&\ words);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ insertWord(TrieNode*\ node,\ \textcolor{keyword}{const}\ std::wstring\&\ word);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ loadIntoTrie(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keywordtype}{bool}\&\ dictLoaded);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteTrie(TrieNode*\ node);}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+
+\end{DoxyCode}

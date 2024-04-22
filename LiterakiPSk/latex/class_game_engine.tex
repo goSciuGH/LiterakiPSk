@@ -1,0 +1,273 @@
+\hypertarget{class_game_engine}{}\doxysection{Game\+Engine Class Reference}
+\label{class_game_engine}\index{GameEngine@{GameEngine}}
+
+
+Klasa reprezentująca silnik gry.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_engine_a64c430f74d72e2745646fdbffbd97930}{Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. Tworzy okno renderowania, załadowuje słownik i zestaw liter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}{$\sim$\+Game\+Engine}} ()
+\begin{DoxyCompactList}\small\item\em Dekonstruktor. Usuwa istniejące obiekty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}{run}} ()
+\begin{DoxyCompactList}\small\item\em Pętla główna gry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_ac198f27f818ba40b0809883fd68f3ba7}{add\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Dodanie obiektu do listy obiektów. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_a668ea2a62d94330ea7dad1fd66069734}{add\+Tile}} (int player, int slot, \mbox{\hyperlink{class_tile}{Tile}} $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Dodanie płytki do listy płytek. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_engine_a17c152bf4307940acb2e330ea895e0cd}{give\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Rozdanie płytek graczom na początek gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{class_game_engine_a86c492f4c9de7c08570918f245f4e597}{main\+Window}}
+\begin{DoxyCompactList}\small\item\em Okno renderowania. \end{DoxyCompactList}\item 
+sf\+::\+View \mbox{\hyperlink{class_game_engine_a4dec6d3c81d0cb6f128b91d26f4aea86}{view}}
+\begin{DoxyCompactList}\small\item\em Widok okna. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_engine_a42c7e608e3ce860170b9ca68d03b256f}{game\+State}} = 0
+\item 
+\mbox{\hyperlink{class_dictionary}{Dictionary}} \mbox{\hyperlink{class_game_engine_ac70d86dee428701a6f5914c7cfb1cc25}{dictionary}}
+\begin{DoxyCompactList}\small\item\em Stan gry. \end{DoxyCompactList}\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{class_game_engine_a98c65cf13ad47196d255e0dae51ac92f}{is\+Dictionary\+Loaded}}
+\begin{DoxyCompactList}\small\item\em Flaga załadowania słownika. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ wchar\+\_\+t, unsigned int $>$ $>$ \mbox{\hyperlink{class_game_engine_ae2ce99ad4f14b80afeca8485f6954b6d}{blueprint\+Bag}}
+\begin{DoxyCompactList}\small\item\em Wczytany zestaw liter. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ wchar\+\_\+t, unsigned int $>$ $>$ \mbox{\hyperlink{class_game_engine_a6af4f2da035099ef08962409c3469f1c}{game\+Bag}}
+\begin{DoxyCompactList}\small\item\em Zestaw liter używany podczas rozgrywki. \end{DoxyCompactList}\item 
+std\+::multiset$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$, \mbox{\hyperlink{struct_game_object_1_1_compare_objects}{Game\+Object\+::\+Compare\+Objects}} $>$ \mbox{\hyperlink{class_game_engine_abe7743e51a54821b55cabc3692df9058}{object\+Set}}
+\begin{DoxyCompactList}\small\item\em Multiset zawierający wskaźniki na obiekty gry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile}{Tile}} $\ast$ \mbox{\hyperlink{class_game_engine_ad90c7089e7df8657651ba4914f6c4746}{player\+Rack\+Tiles}} \mbox{[}2\mbox{]}\mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica wskaźników na obiekty płytek na stojakach graczy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile}{Tile}} $\ast$ \mbox{\hyperlink{class_game_engine_a15ad5c2ba391a571cd62daf91f43e07a}{on\+Board\+Tiles}} \mbox{[}7\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tablica wskaźników na aktywne płytki na planszy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_loading_screen}{Loading\+Screen}} $\ast$ \mbox{\hyperlink{class_game_engine_a5cb0459f4e77791adbe74515d099a814}{load\+Scr}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na ekran ładowania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game_engine_af075a77b7de3efa2b256957a7c59cdfd}{active\+Player}} = 0
+\begin{DoxyCompactList}\small\item\em Flaga aktywnego gracza. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tile}{Tile}} $\ast$ \mbox{\hyperlink{class_game_engine_a0e644b76ee87e8e4730e1f778120d297}{held\+Tile}} = nullptr
+\begin{DoxyCompactList}\small\item\em Wskaźnik na podnisioną płytkę \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentująca silnik gry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_engine_a64c430f74d72e2745646fdbffbd97930}\label{class_game_engine_a64c430f74d72e2745646fdbffbd97930}} 
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\index{GameEngine@{GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{GameEngine()}{GameEngine()}}
+{\footnotesize\ttfamily Game\+Engine\+::\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Konstruktor domyślny. Tworzy okno renderowania, załadowuje słownik i zestaw liter. 
+
+\mbox{\Hypertarget{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}\label{class_game_engine_a8e59d8341ef9d2dcc62eee1437e37f14}} 
+\index{GameEngine@{GameEngine}!````~GameEngine@{$\sim$GameEngine}}
+\index{````~GameEngine@{$\sim$GameEngine}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{$\sim$GameEngine()}{~GameEngine()}}
+{\footnotesize\ttfamily Game\+Engine\+::$\sim$\+Game\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dekonstruktor. Usuwa istniejące obiekty. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_engine_ac198f27f818ba40b0809883fd68f3ba7}\label{class_game_engine_ac198f27f818ba40b0809883fd68f3ba7}} 
+\index{GameEngine@{GameEngine}!addObject@{addObject}}
+\index{addObject@{addObject}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addObject()}{addObject()}}
+{\footnotesize\ttfamily void Game\+Engine\+::add\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Dodanie obiektu do listy obiektów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & Wskaźnik na obiekty \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_engine_a668ea2a62d94330ea7dad1fd66069734}\label{class_game_engine_a668ea2a62d94330ea7dad1fd66069734}} 
+\index{GameEngine@{GameEngine}!addTile@{addTile}}
+\index{addTile@{addTile}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{addTile()}{addTile()}}
+{\footnotesize\ttfamily void Game\+Engine\+::add\+Tile (\begin{DoxyParamCaption}\item[{int}]{player,  }\item[{int}]{slot,  }\item[{\mbox{\hyperlink{class_tile}{Tile}} $\ast$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Dodanie płytki do listy płytek. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Numer gracza \\
+\hline
+{\em slot} & Miejsce na stojaku \\
+\hline
+{\em obj} & Wskaźnik na obiekt płytki \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_engine_a17c152bf4307940acb2e330ea895e0cd}\label{class_game_engine_a17c152bf4307940acb2e330ea895e0cd}} 
+\index{GameEngine@{GameEngine}!giveTiles@{giveTiles}}
+\index{giveTiles@{giveTiles}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{giveTiles()}{giveTiles()}}
+{\footnotesize\ttfamily void Game\+Engine\+::give\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rozdanie płytek graczom na początek gry. 
+
+\mbox{\Hypertarget{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}\label{class_game_engine_ab01970da2c68fefbf48b98c59d5627ae}} 
+\index{GameEngine@{GameEngine}!run@{run}}
+\index{run@{run}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Game\+Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pętla główna gry. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_engine_af075a77b7de3efa2b256957a7c59cdfd}\label{class_game_engine_af075a77b7de3efa2b256957a7c59cdfd}} 
+\index{GameEngine@{GameEngine}!activePlayer@{activePlayer}}
+\index{activePlayer@{activePlayer}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{activePlayer}{activePlayer}}
+{\footnotesize\ttfamily int Game\+Engine\+::active\+Player = 0}
+
+
+
+Flaga aktywnego gracza. 
+
+\mbox{\Hypertarget{class_game_engine_ae2ce99ad4f14b80afeca8485f6954b6d}\label{class_game_engine_ae2ce99ad4f14b80afeca8485f6954b6d}} 
+\index{GameEngine@{GameEngine}!blueprintBag@{blueprintBag}}
+\index{blueprintBag@{blueprintBag}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{blueprintBag}{blueprintBag}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$wchar\+\_\+t, unsigned int$>$ $>$ Game\+Engine\+::blueprint\+Bag}
+
+
+
+Wczytany zestaw liter. 
+
+\mbox{\Hypertarget{class_game_engine_ac70d86dee428701a6f5914c7cfb1cc25}\label{class_game_engine_ac70d86dee428701a6f5914c7cfb1cc25}} 
+\index{GameEngine@{GameEngine}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dictionary}{Dictionary}} Game\+Engine\+::dictionary}
+
+
+
+Stan gry. 
+
+Obiekt słownika gry \mbox{\Hypertarget{class_game_engine_a6af4f2da035099ef08962409c3469f1c}\label{class_game_engine_a6af4f2da035099ef08962409c3469f1c}} 
+\index{GameEngine@{GameEngine}!gameBag@{gameBag}}
+\index{gameBag@{gameBag}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{gameBag}{gameBag}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$wchar\+\_\+t, unsigned int$>$ $>$ Game\+Engine\+::game\+Bag}
+
+
+
+Zestaw liter używany podczas rozgrywki. 
+
+\mbox{\Hypertarget{class_game_engine_a42c7e608e3ce860170b9ca68d03b256f}\label{class_game_engine_a42c7e608e3ce860170b9ca68d03b256f}} 
+\index{GameEngine@{GameEngine}!gameState@{gameState}}
+\index{gameState@{gameState}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{gameState}{gameState}}
+{\footnotesize\ttfamily int Game\+Engine\+::game\+State = 0}
+
+\mbox{\Hypertarget{class_game_engine_a0e644b76ee87e8e4730e1f778120d297}\label{class_game_engine_a0e644b76ee87e8e4730e1f778120d297}} 
+\index{GameEngine@{GameEngine}!heldTile@{heldTile}}
+\index{heldTile@{heldTile}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{heldTile}{heldTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tile}{Tile}}$\ast$ Game\+Engine\+::held\+Tile = nullptr}
+
+
+
+Wskaźnik na podnisioną płytkę 
+
+\mbox{\Hypertarget{class_game_engine_a98c65cf13ad47196d255e0dae51ac92f}\label{class_game_engine_a98c65cf13ad47196d255e0dae51ac92f}} 
+\index{GameEngine@{GameEngine}!isDictionaryLoaded@{isDictionaryLoaded}}
+\index{isDictionaryLoaded@{isDictionaryLoaded}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{isDictionaryLoaded}{isDictionaryLoaded}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Game\+Engine\+::is\+Dictionary\+Loaded}
+
+
+
+Flaga załadowania słownika. 
+
+\mbox{\Hypertarget{class_game_engine_a5cb0459f4e77791adbe74515d099a814}\label{class_game_engine_a5cb0459f4e77791adbe74515d099a814}} 
+\index{GameEngine@{GameEngine}!loadScr@{loadScr}}
+\index{loadScr@{loadScr}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{loadScr}{loadScr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_loading_screen}{Loading\+Screen}}$\ast$ Game\+Engine\+::load\+Scr}
+
+
+
+Wskaźnik na ekran ładowania. 
+
+\mbox{\Hypertarget{class_game_engine_a86c492f4c9de7c08570918f245f4e597}\label{class_game_engine_a86c492f4c9de7c08570918f245f4e597}} 
+\index{GameEngine@{GameEngine}!mainWindow@{mainWindow}}
+\index{mainWindow@{mainWindow}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{mainWindow}{mainWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window Game\+Engine\+::main\+Window}
+
+
+
+Okno renderowania. 
+
+\mbox{\Hypertarget{class_game_engine_abe7743e51a54821b55cabc3692df9058}\label{class_game_engine_abe7743e51a54821b55cabc3692df9058}} 
+\index{GameEngine@{GameEngine}!objectSet@{objectSet}}
+\index{objectSet@{objectSet}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{objectSet}{objectSet}}
+{\footnotesize\ttfamily std\+::multiset$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$\ast$, \mbox{\hyperlink{struct_game_object_1_1_compare_objects}{Game\+Object\+::\+Compare\+Objects}}$>$ Game\+Engine\+::object\+Set}
+
+
+
+Multiset zawierający wskaźniki na obiekty gry. 
+
+\mbox{\Hypertarget{class_game_engine_a15ad5c2ba391a571cd62daf91f43e07a}\label{class_game_engine_a15ad5c2ba391a571cd62daf91f43e07a}} 
+\index{GameEngine@{GameEngine}!onBoardTiles@{onBoardTiles}}
+\index{onBoardTiles@{onBoardTiles}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{onBoardTiles}{onBoardTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tile}{Tile}}$\ast$ Game\+Engine\+::on\+Board\+Tiles\mbox{[}7\mbox{]}}
+
+
+
+Tablica wskaźników na aktywne płytki na planszy. 
+
+\mbox{\Hypertarget{class_game_engine_ad90c7089e7df8657651ba4914f6c4746}\label{class_game_engine_ad90c7089e7df8657651ba4914f6c4746}} 
+\index{GameEngine@{GameEngine}!playerRackTiles@{playerRackTiles}}
+\index{playerRackTiles@{playerRackTiles}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{playerRackTiles}{playerRackTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tile}{Tile}}$\ast$ Game\+Engine\+::player\+Rack\+Tiles\mbox{[}2\mbox{]}\mbox{[}7\mbox{]}}
+
+
+
+Tablica wskaźników na obiekty płytek na stojakach graczy. 
+
+\mbox{\Hypertarget{class_game_engine_a4dec6d3c81d0cb6f128b91d26f4aea86}\label{class_game_engine_a4dec6d3c81d0cb6f128b91d26f4aea86}} 
+\index{GameEngine@{GameEngine}!view@{view}}
+\index{view@{view}!GameEngine@{GameEngine}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily sf\+::\+View Game\+Engine\+::view}
+
+
+
+Widok okna. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_engine_8h}{Game\+Engine.\+h}}\item 
+\mbox{\hyperlink{_game_engine_8cpp}{Game\+Engine.\+cpp}}\end{DoxyCompactItemize}
